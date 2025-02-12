@@ -1,21 +1,27 @@
 #!/sbin/sh
-# Magisk Update Binary
-# DO NOT CHANGE ANYTHING IN THIS FILE!
+# Magisk 更新脚本
+# 请勿修改此文件中的任何内容！
 
+# 输出文件描述符
 OUTFD=$2
+# 模块 ZIP 文件路径
 ZIPFILE=$3
 
+# 打印消息到 Magisk 安装界面
 ui_print() {
     echo -e "ui_print $1\nui_print" > /proc/self/fd/$OUTFD
 }
 
+# 打印模块信息
 ui_print "******************************"
 ui_print "MiuiFboEnabler Magisk Module"
 ui_print "******************************"
 
+# 解压模块文件到模块目录
 ui_print "- Extracting module files"
 unzip -o "$ZIPFILE" -d $MODPATH >&2
 
+# 设置文件权限
 ui_print "- Setting permissions"
 set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm $MODPATH/service.sh 0 0 0755
