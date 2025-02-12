@@ -1,6 +1,17 @@
+# 模块ID，必须唯一
 id=miuifboenabler
+
+# 模块名称
 name=Miui FBO Enabler
+
+# 模块版本号
 version=v1.0
+
+# 模块版本代码（用于更新判断）
 versionCode=1
+
+# 作者名称
 author=YourName
+
+# 模块描述
 description=Automatically set miui_fbo_enable at 00:30 daily.
