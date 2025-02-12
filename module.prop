@@ -1,0 +1,6 @@
+id=miuifboenabler
+name=Miui FBO Enabler
+version=v1.0
+versionCode=1
+author=YourName
+description=Automatically set miui_fbo_enable at 00:30 daily.
